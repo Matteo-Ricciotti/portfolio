@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": [
+    "src",
+    "components/canvas",
+    "components/About.tsx",
+    "components/Contact.tsx",
+    "components/Experience.tsx",
+    "components/Feedbacks.tsx",
+    "components/Hero.tsx",
+    "components/index.ts",
+    "components/Loader.tsx",
+    "components/Navbar.tsx",
+    "components/Tech.tsx",
+    "components/Works.tsx"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
