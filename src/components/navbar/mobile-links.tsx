@@ -2,6 +2,7 @@ import { Dispatch, FC, SetStateAction } from "react";
 
 import cn from "../../lib/cn";
 import { navLinks } from "../../constants/navbar";
+import { Link } from "react-router-dom";
 
 type Props = {
   scroll: string;
@@ -36,7 +37,7 @@ const MobileLinks: FC<Props> = ({
               setScroll(link.title);
             }}
           >
-            <a href={`#${link.id}`}>{link.title}</a>
+            <Link to={`#${link.id}`}>{link.title}</Link>
           </li>
         ))}
       </ul>
