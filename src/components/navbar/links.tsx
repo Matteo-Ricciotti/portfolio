@@ -31,6 +31,7 @@ const Links: FC<Props> = ({
     >
       {navLinks.map((link) => (
         <LinkItem
+          key={link.id}
           link={link}
           scroll={scroll}
           mobile={mobile}

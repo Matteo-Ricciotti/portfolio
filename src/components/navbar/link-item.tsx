@@ -17,7 +17,6 @@ type Props = {
 const LinkItem: FC<Props> = ({ link, mobile, scroll, handleLinkClick }) => {
   return (
     <li
-      key={link.id}
       className={cn(
         "cursor-pointer text-lg font-medium",
         !mobile && "hover:text-white",
