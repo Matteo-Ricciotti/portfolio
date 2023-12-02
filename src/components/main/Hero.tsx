@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ComputersCanvas } from "..";
 
@@ -22,7 +21,7 @@ const Hero = () => {
       </div>
       <ComputersCanvas />
       <div className="absolute bottom-32 flex w-full items-center justify-center xs:bottom-10">
-        <Link to="#about">
+        <a href="#about">
           <div className="flex h-16 w-[35px] items-start justify-center rounded-3xl border-4 border-secondary p-2">
             <motion.div
               animate={{
@@ -36,7 +35,7 @@ const Hero = () => {
               className="mb-1 h-3 w-3 rounded-full bg-secondary"
             ></motion.div>
           </div>
-        </Link>
+        </a>
       </div>
     </section>
   );

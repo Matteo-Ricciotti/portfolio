@@ -25,7 +25,7 @@ const LinkItem: FC<Props> = ({ link, mobile, scroll, handleLinkClick }) => {
       )}
       onClick={() => handleLinkClick(link)}
     >
-      <Link to={`#${link.id}`}>{link.title}</Link>
+      <a href={`#${link.id}`}>{link.title}</a>
     </li>
   );
 };
