@@ -12,7 +12,7 @@ type Props = {
 
 const ServiceCard = ({ index, title, icon }: Props) => {
   return (
-    <Tilt>
+    <Tilt className="w-full xs:w-auto">
       <motion.div
         variants={fadeIn({
           direction: "right",

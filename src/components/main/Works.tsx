@@ -78,7 +78,7 @@ const ProjectCard = ({
 
 const Works = () => {
   return (
-    <SectionWrapper idName="works">
+    <SectionWrapper idName="work">
       <motion.div variants={textVariant()}>
         <p className="section-sub-text">My work</p>
         <h2 className="section-head-text">Projects</h2>
