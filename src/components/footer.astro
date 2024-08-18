@@ -1,0 +1,9 @@
+<footer class="text-center p-4 mt-auto">
+    <small>Copyright &copy; <span id="copyright"></span> | All rights reserved</small>
+</footer>
+
+<script>
+    const copyrightElement = document.querySelector('#copyright')
+
+    if(copyrightElement) copyrightElement.textContent = new Date().getFullYear().toString()
+</script>

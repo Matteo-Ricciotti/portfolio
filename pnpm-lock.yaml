@@ -17,12 +17,18 @@ importers:
       astro:
         specifier: ^4.14.2
         version: 4.14.2(rollup@4.21.0)(typescript@5.5.4)
+      astro-navbar:
+        specifier: ^2.3.3
+        version: 2.3.3
       astro-seo:
         specifier: ^0.8.4
         version: 0.8.4(typescript@5.5.4)
       tailwindcss:
         specifier: ^3.4.10
         version: 3.4.10
+      typed.js:
+        specifier: ^2.1.0
+        version: 2.1.0
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
@@ -695,6 +701,9 @@ packages:
 
   array-iterate@2.0.1:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
+
+  astro-navbar@2.3.3:
+    resolution: {integrity: sha512-WAiQUVh3fS+bUw1oDcWpddFj30z3VgmMDmSjpU78idCXiV5t4KtlBvKV0mE/+hpcGLK0ji1evvCbk2wQ7wphyQ==}
 
   astro-seo@0.8.4:
     resolution: {integrity: sha512-Ou1vzQSXAxa0K8rtNtXNvSpYqOGEgMhh0immMxJeXmbVZac3UKCNWAoXWyOQDFYsZvBugCRSg0N1phBqPMVgCw==}
@@ -1846,6 +1855,9 @@ packages:
     resolution: {integrity: sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==}
     engines: {node: '>=12.20'}
 
+  typed.js@2.1.0:
+    resolution: {integrity: sha512-bDuXEf7YcaKN4g08NMTUM6G90XU25CK3bh6U0THC/Mod/QPKlEt9g/EjvbYB8x2Qwr2p6J6I3NrsoYaVnY6wsQ==}
+
   typesafe-path@0.2.2:
     resolution: {integrity: sha512-OJabfkAg1WLZSqJAJ0Z6Sdt3utnbzr/jh+NAHoyWHJe8CMSy79Gm085094M9nvTPy22KzTVn5Zq5mbapCI/hPA==}
 
@@ -2800,6 +2812,8 @@ snapshots:
       dequal: 2.0.3
 
   array-iterate@2.0.1: {}
+
+  astro-navbar@2.3.3: {}
 
   astro-seo@0.8.4(typescript@5.5.4):
     dependencies:
@@ -4276,6 +4290,8 @@ snapshots:
     optional: true
 
   type-fest@2.19.0: {}
+
+  typed.js@2.1.0: {}
 
   typesafe-path@0.2.2: {}
 

@@ -3,5 +3,25 @@ import MainLayout from "../layouts/main-layout.astro";
 ---
 
 <MainLayout title="Matteo Ricciotti Portfolio" description="Software Developer Porfolio that show my set of skills, experiences and projects">
-	Home
+	<div>
+		<h1 class="text-4xl md:text-6xl text-center">Hi there 👋, I'm Matteo Ricciotti</h1>
+		<div id="typed-strings">
+			<p>I am a <strong>Software Developer</strong></p>
+			<p>I <em>work</em> with RectJS and NodeJS</p>
+		</div>
+
+		<div class="text-center mt-6">
+			<span id="typed"></span>
+		</div>
+	</div>
 </MainLayout>
+
+<script>
+	import Typed from 'typed.js';
+
+	const typed = new Typed('#typed', { 
+		stringsElement: '#typed-strings',
+		typeSpeed: 50,
+		loop: true
+	})
+</script>
