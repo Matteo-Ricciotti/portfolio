@@ -2,16 +2,16 @@
 import { Astronav, MenuItems, MenuIcon } from 'astro-navbar'
 ---
 
-<header class="lg:flex lg:px-5 py-5 h-fit">
+<header class="h-fit py-5 md:px-5 md:flex">
     <Astronav>
         <div class="flex justify-between items-center mr-auto">
-            <a>MR</a>
-            <div class="lg:hidden">
+            <a href="/">MR</a>
+            <div class="md:hidden">
                 <MenuIcon class='size-4 text-white' />
             </div>
         </div>
-        <MenuItems class='hidden lg:block'>
-            <ul class="flex flex-col lg:flex-row lg:gap-6">
+        <MenuItems class='hidden md:block'>
+            <ul class="flex flex-col md:flex-row md:gap-6">
                 <li>
                     <a href="/">Home</a>
                 </li>

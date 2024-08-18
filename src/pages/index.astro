@@ -3,14 +3,16 @@ import MainLayout from "../layouts/main-layout.astro";
 ---
 
 <MainLayout title="Matteo Ricciotti Portfolio" description="Software Developer Porfolio that show my set of skills, experiences and projects">
-	<div>
+	<div class="relative h-fit">
 		<h1 class="text-4xl md:text-6xl text-center tracking-wider">Hi there 👋, I'm Matteo Ricciotti!</h1>
 		<div id="typed-strings">
-			<p>I am a <strong>Software Developer</strong></p>
-			<p>I <em>work</em> with RectJS and NodeJS</p>
+			<p><span class="text-lg" />I am a <strong class="text-lg text-slate-400">Software Developer</strong></p>
+			<p><span class="text-lg" />I <em>work</em> with <strong class="text-lg text-slate-400">RectJS</strong> and <strong class="text-lg text-slate-400">NodeJS</strong></p>
+			<p><span class="text-lg" />I am a passionate <strong class="text-lg text-slate-400">Guitarist</strong></p>
+			<p><span class="text-lg" />I frequently go to the <strong class="text-lg text-slate-400">Gym</strong></p>
 		</div>
 
-		<div class="text-center mt-6">
+		<div class="text-center absolute left-0 right-0 -bottom-12">
 			<span id="typed"></span>
 		</div>
 	</div>
@@ -21,7 +23,7 @@ import MainLayout from "../layouts/main-layout.astro";
 
 	new Typed('#typed', { 
 		stringsElement: '#typed-strings',
-		typeSpeed: 40,
+		typeSpeed: 50,
 		loop: true
 	})
 </script>
