@@ -4,7 +4,7 @@ import MainLayout from "../layouts/main-layout.astro";
 
 <MainLayout title="Matteo Ricciotti Portfolio" description="Software Developer Porfolio that show my set of skills, experiences and projects">
 	<div>
-		<h1 class="text-4xl md:text-6xl text-center">Hi there 👋, I'm Matteo Ricciotti</h1>
+		<h1 class="text-4xl md:text-6xl text-center tracking-wider">Hi there 👋, I'm Matteo Ricciotti!</h1>
 		<div id="typed-strings">
 			<p>I am a <strong>Software Developer</strong></p>
 			<p>I <em>work</em> with RectJS and NodeJS</p>
@@ -19,9 +19,9 @@ import MainLayout from "../layouts/main-layout.astro";
 <script>
 	import Typed from 'typed.js';
 
-	const typed = new Typed('#typed', { 
+	new Typed('#typed', { 
 		stringsElement: '#typed-strings',
-		typeSpeed: 50,
+		typeSpeed: 40,
 		loop: true
 	})
 </script>
