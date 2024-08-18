@@ -2,6 +2,26 @@
 import MainLayout from "../layouts/main-layout.astro";
 ---
 
-<MainLayout title="" description="">
-    Projects
+<MainLayout title="Matteo Ricciotti Portfolio - Projects" description="My most relevant projects">
+    <div>
+        <h1  class="text-4xl mb-10 md:mb-16 md:text-6xl text-center tracking-wider">Projects</h1>
+        <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-10"></div>
+    </div>
 </MainLayout>
+
+<script>
+    import { PROJECTS } from "../constants/projects"
+
+    const projectsContainer = document.querySelector('#projects-container')   
+
+    if(projectsContainer){
+        projectsContainer.innerHTML = PROJECTS.map(({ name, description, image, url }) =>
+            `
+            <a class="mx-auto" href="/projects${url}">
+                <img class="size-64 min-w-64 object-cover rounded-lg" src="${image}" alt="${name}"/>
+            </a>
+            `
+        ).join('')
+    }
+
+</script>
