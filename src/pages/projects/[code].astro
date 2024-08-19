@@ -1,0 +1,28 @@
+---
+import type {  GetStaticPathsItem } from "astro";
+import MainLayout from "../../layouts/main-layout.astro";
+import Title from "../../components/title.astro";
+import { PROJECTS } from "../../constants/projects";
+
+export const getStaticPaths = (() => {
+    return PROJECTS.map(({ code, name,description,image }) => ({
+        params: {
+            code
+        },
+        props: {
+            name,
+            description,
+            image
+        }
+    }) satisfies GetStaticPathsItem)
+})  ;
+const { name, description, image } = Astro.props
+---
+
+<MainLayout title="" description="">
+    <section class="mx-auto">
+        <Title title={name} />
+        <p>{description}</p>
+        <img src={image} alt={name} />
+    </section>
+</MainLayout>

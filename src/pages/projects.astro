@@ -16,9 +16,9 @@ import MainLayout from "../layouts/main-layout.astro";
     const projectsContainer = document.querySelector('#projects-container')   
 
     if(projectsContainer){
-        projectsContainer.innerHTML = PROJECTS.map(({ name, description, image, url }) =>
+        projectsContainer.innerHTML = PROJECTS.map(({ code, name, image }) =>
             `
-            <a class="mx-auto" href="/projects${url}">
+            <a class="mx-auto" href="/projects/${code}">
                 <img class="size-64 min-w-64 object-cover rounded-lg" src="${image}" alt="${name}"/>
             </a>
             `
