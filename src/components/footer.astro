@@ -1,9 +1,9 @@
-<footer class="text-center p-4 mt-auto">
-    <small class="text-slate-400">Copyright &copy; <span id="copyright"></span> | All rights reserved</small>
+<footer class="mt-auto p-4 text-center">
+    <small class="text-white/50">Copyright &copy; <span id="copyright"></span> | All rights reserved</small>
 </footer>
 
 <script>
-    const copyrightElement = document.querySelector('#copyright')
+    const copyrightElement = document.querySelector("#copyright");
 
-    if(copyrightElement) copyrightElement.textContent = new Date().getFullYear().toString()
+    if (copyrightElement) copyrightElement.innerHTML = String(new Date().getFullYear());
 </script>

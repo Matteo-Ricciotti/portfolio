@@ -1,26 +1,35 @@
 ---
-import { Astronav, MenuItems, MenuIcon } from 'astro-navbar'
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+
+const currentPath = Astro.url.pathname;
 ---
 
-<header class="h-fit py-5 md:px-5 md:flex">
+<header class="h-fit py-6 md:flex md:px-5">
     <Astronav>
-        <div class="flex justify-between items-center mr-auto">
-            <a href="/">MR</a>
-            <div class="md:hidden">
-                <MenuIcon class='size-4 text-white' />
-            </div>
+        <div class="mr-auto flex items-center justify-between">
+            <a href="/" class="text-2xl tracking-wide sm:text-3xl">Matteo <strong class="text-accent">.</strong></a>
+            <MenuIcon class="size-6 text-white sm:size-8 md:hidden" />
         </div>
-        <MenuItems class='hidden md:block'>
-            <ul class="flex flex-col md:flex-row md:gap-6">
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/projects">Projects</a>
-                </li>
-                <li>
-                    <a href="/about">About</a>
-                </li>
+        <MenuItems class="hidden items-center md:flex">
+            <ul
+                class="absolute right-4 top-20 flex flex-col gap-3 rounded-lg text-xl max-md:bg-black/30 max-md:p-4 md:static md:flex-row md:gap-8 md:text-lg"
+            >
+                <a href="/" class={`transition-all hover:text-accent-hover ${currentPath === "/" ? "text-accent" : ""}`}
+                    >Home</a
+                >
+                <li></li>
+                <a
+                    href="/projects"
+                    class={`transition-all hover:text-accent-hover ${currentPath === "/projects" ? "text-accent" : ""}`}
+                    >Projects</a
+                >
+                <li></li>
+                <a
+                    href="/about"
+                    class={`transition-all hover:text-accent-hover ${currentPath === "/about" ? "text-accent" : ""}`}
+                    >About</a
+                >
+                <li></li>
             </ul>
         </MenuItems>
     </Astronav>

@@ -3,28 +3,40 @@ import Title from "../components/title.astro";
 import MainLayout from "../layouts/main-layout.astro";
 ---
 
-<MainLayout title="Matteo Ricciotti Portfolio - Home" description="Software Developer Porfolio that show my set of skills, experiences and projects">
-	<div class="relative h-fit">
-		<Title title="Hi there 👋, I'm Matteo Ricciotti!" />
-		<div id="typed-strings">
-			<p><span class="text-lg" />I am a <strong class="text-lg text-slate-400">Fullstack Software Developer</strong></p>
-			<p><span class="text-lg" />I <em>work</em> with <strong class="text-lg text-slate-400">RectJS</strong> and <strong class="text-lg text-slate-400">NodeJS</strong></p>
-			<p><span class="text-lg" />I am a passionate <strong class="text-lg text-slate-400">Guitarist</strong></p>
-			<p><span class="text-lg" />I frequently go to the <strong class="text-lg text-slate-400">Gym</strong></p>
-		</div>
+<MainLayout
+    title="Matteo Ricciotti Portfolio - Home"
+    description="Software Developer Porfolio that show my set of skills, experiences and projects"
+>
+    <div class="relative h-fit">
+        <Title>Hi there 👋, I'm <span class="text-accent">Matteo Ricciotti</span>!</Title>
+        <div id="typed-strings">
+            <p>
+                <span class="text-lg"></span>I am a <strong class="text-lg">Fullstack Software Developer</strong>
+            </p>
+            <p>
+                <span class="text-lg"></span>I <em>work</em> with <strong class="text-lg">RectJS</strong>
+                and <strong class="text-lg">NodeJS</strong>
+            </p>
+            <p>
+                <span class="text-lg"></span>I am a passionate <strong class="text-lg">Guitarist</strong>
+            </p>
+            <p>
+                <span class="text-lg"></span>I frequently go to the <strong class="text-lg">Gym</strong>
+            </p>
+        </div>
 
-		<div class="text-center absolute left-0 right-0 -bottom-12">
-			<span id="typed"></span>
-		</div>
-	</div>
+        <div class="absolute -bottom-12 left-0 right-0 text-center">
+            <span id="typed"></span>
+        </div>
+    </div>
 </MainLayout>
 
 <script>
-	import Typed from 'typed.js';
+    import Typed from "typed.js";
 
-	new Typed('#typed', { 
-		stringsElement: '#typed-strings',
-		typeSpeed: 50,
-		loop: true
-	})
+    new Typed("#typed", {
+        stringsElement: "#typed-strings",
+        typeSpeed: 50,
+        loop: true,
+    });
 </script>
