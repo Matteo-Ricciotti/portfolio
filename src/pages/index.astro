@@ -7,36 +7,21 @@ import MainLayout from "../layouts/main-layout.astro";
     title="Matteo Ricciotti Portfolio - Home"
     description="Software Developer Porfolio that show my set of skills, experiences and projects"
 >
-    <div class="relative h-fit">
-        <Title>Hi there 👋, I'm <span class="text-accent">Matteo Ricciotti</span>!</Title>
-        <div id="typed-strings">
-            <p>
-                <span class="text-lg"></span>I am a <strong class="text-lg">Fullstack Software Developer</strong>
-            </p>
-            <p>
-                <span class="text-lg"></span>I <em>work</em> with <strong class="text-lg">RectJS</strong>
-                and <strong class="text-lg">NodeJS</strong>
-            </p>
-            <p>
-                <span class="text-lg"></span>I am a passionate <strong class="text-lg">Guitarist</strong>
-            </p>
-            <p>
-                <span class="text-lg"></span>I frequently go to the <strong class="text-lg">Gym</strong>
+    <div class="flex flex-col items-center justify-between text-center md:flex-row md:text-left">
+        <div class="order-2 md:order-none">
+            <p class="mb-2">Software Developer</p>
+            <Title moreClass="flex flex-col gap-2">
+                <span class="hidden lg:inline">Hello there I'm</span>
+                <span class="lg:hidden">Hello I'm</span>
+                <span class="text-accent">Matteo Ricciotti</span>
+            </Title>
+            <p class="my-6 max-w-[500px] leading-8 tracking-widest text-white/80">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod commodi vitae maxime sequi est voluptatum
+                aut id aliquam.
             </p>
         </div>
-
-        <div class="absolute -bottom-12 left-0 right-0 text-center">
-            <span id="typed"></span>
+        <div class="order-1 size-[198px] max-md:mb-10 sm:size-[298px] md:size-[398px]">
+            <img src="/me.png" alt="matteo ricciotti" />
         </div>
     </div>
 </MainLayout>
-
-<script>
-    import Typed from "typed.js";
-
-    new Typed("#typed", {
-        stringsElement: "#typed-strings",
-        typeSpeed: 50,
-        loop: true,
-    });
-</script>
