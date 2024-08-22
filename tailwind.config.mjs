@@ -20,10 +20,10 @@ export default {
         },
         extend: {
             colors: {
-                primary: "#1c1c22",
+                primary: "rgba(25, 31, 45, 1)",
                 accent: {
-                    DEFAULT: "#00ff99",
-                    hover: "#00ff9990",
+                    DEFAULT: "rgba(83, 221, 108, 1)",
+                    hover: "rgba(70, 188, 108, 1)",
                 },
             },
         },

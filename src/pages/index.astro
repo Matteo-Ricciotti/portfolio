@@ -1,7 +1,9 @@
 ---
 import Avatar from "../components/avatar.astro";
+import Button from "../components/button.astro";
 import Title from "../components/title.astro";
 import MainLayout from "../layouts/main-layout.astro";
+import Download from "../assets/download.astro";
 ---
 
 <MainLayout
@@ -22,6 +24,10 @@ import MainLayout from "../layouts/main-layout.astro";
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur
                 adipisicing elit.
             </p>
+            <Button onclick="">
+                DOWNLOAD CV
+                <Download />
+            </Button>
         </div>
         <Avatar />
     </div>
