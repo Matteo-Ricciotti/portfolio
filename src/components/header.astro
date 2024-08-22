@@ -12,7 +12,7 @@ const currentPath = Astro.url.pathname;
         </div>
         <MenuItems class="hidden items-center md:flex">
             <ul
-                class="absolute right-4 top-20 flex flex-col gap-3 rounded-lg text-xl max-md:bg-black/30 max-md:p-4 md:static md:flex-row md:gap-8 md:text-lg"
+                class="absolute right-4 top-20 z-10 flex flex-col gap-3 rounded-lg text-xl max-md:bg-black/10 max-md:p-4 max-md:backdrop-blur-md md:static md:flex-row md:gap-8 md:text-lg"
             >
                 <a href="/" class={`transition-all hover:text-accent-hover ${currentPath === "/" ? "text-accent" : ""}`}
                     >Home</a
