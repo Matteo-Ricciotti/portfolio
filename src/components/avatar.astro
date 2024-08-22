@@ -18,52 +18,23 @@
     ctx.strokeStyle = "#00ff99";
     ctx.lineWidth = 2;
 
-    const startLongDash = 60;
-    const startShortDash = 15;
+    const longDash = 60;
+    const shortDash = 15;
     const gap = 40;
 
-    const maxLongDash = 180;
-
-    let longDash = startLongDash;
-    let shortDash = startShortDash;
-
     let offset = 0;
-    let increment = 0.2;
-    let descending = false;
 
     const animate = () => {
+        ctx.lineDashOffset = -offset;
+
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         ctx.beginPath();
         ctx.arc(canvas.width / 2, canvas.height / 2, canvas.width / 2 - 4, 0, Math.PI * 2);
-        ctx.setLineDash([longDash, gap, shortDash, gap, longDash, gap, shortDash, gap]);
-
-        ctx.lineDashOffset = -offset;
-
+        ctx.setLineDash([longDash, gap, shortDash, gap]);
         ctx.stroke();
 
-        offset += 1;
-
-        if (longDash >= maxLongDash || descending) {
-            longDash -= increment;
-            shortDash -= increment;
-
-            if (!descending) {
-                descending = true;
-            }
-        }
-
-        if (longDash <= startLongDash || !descending) {
-            longDash += increment;
-            shortDash += increment;
-
-            if (descending) {
-                descending = false;
-
-                longDash = startLongDash;
-                shortDash = startShortDash;
-            }
-        }
+        offset += 0.7;
 
         requestAnimationFrame(animate);
     };
