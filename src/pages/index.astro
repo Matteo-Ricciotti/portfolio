@@ -1,9 +1,12 @@
 ---
 import Avatar from "../components/avatar.astro";
-import Button from "../components/button.astro";
+import Link from "../components/link.astro";
+import IconLink from "../components/icon-link.astro";
 import Title from "../components/title.astro";
 import MainLayout from "../layouts/main-layout.astro";
 import Download from "../assets/download.astro";
+import Github from "../assets/github.astro";
+import Linkedin from "../assets/linkedin.astro";
 ---
 
 <MainLayout
@@ -24,10 +27,20 @@ import Download from "../assets/download.astro";
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur
                 adipisicing elit.
             </p>
-            <Button onclick="">
-                DOWNLOAD CV
-                <Download />
-            </Button>
+            <div class="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
+                <Link href="/files/CV.pdf" target="_blank">
+                    DOWNLOAD CV
+                    <Download />
+                </Link>
+                <div class="flex gap-3 md:mr-auto">
+                    <IconLink href="https://github.com/Matteo-Ricciotti" target="_blank">
+                        <Github />
+                    </IconLink>
+                    <IconLink href="https://www.linkedin.com/in/matteo-ricciotti/" target="_blank">
+                        <Linkedin />
+                    </IconLink>
+                </div>
+            </div>
         </div>
         <Avatar />
     </div>
