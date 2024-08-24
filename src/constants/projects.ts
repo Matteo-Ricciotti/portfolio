@@ -30,3 +30,9 @@ export const PROJECTS = [
         image: "/images/sample.jpg",
     },
 ];
+
+export const SKILLS = [];
+
+export const CONTACTS = [];
+
+export const EXPERIENCES = [];

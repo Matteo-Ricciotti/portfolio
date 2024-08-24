@@ -1,11 +1,11 @@
 ---
 type Props = {
-    moreClass?: string;
+    classes?: string;
 };
 
-const { moreClass } = Astro.props;
+const { classes } = Astro.props;
 ---
 
-<h1 class={`text-4xl font-medium  xl:text-6xl ${moreClass}`}>
+<h1 class={`text-4xl font-medium  xl:text-6xl ${classes}`}>
     <slot />
 </h1>

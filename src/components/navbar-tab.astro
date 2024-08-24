@@ -1,0 +1,14 @@
+---
+type Props = {
+    path: string;
+    label: string;
+};
+
+const { pathname } = Astro.url;
+const { path, label } = Astro.props;
+---
+
+<li>
+    <a href={path} class={`transition-all hover:text-accent-hover ${pathname === path ? "text-accent" : ""}`}>{label}</a
+    >
+</li>

@@ -13,14 +13,18 @@ const { title, description } = Astro.props;
 
 <html lang="en">
     <head>
+        <!-- SEO -->
         <SEO title={title} description={description} />
 
+        <!-- Base -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
 
+        <!-- Icon -->
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
+        <!-- Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
