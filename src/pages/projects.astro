@@ -20,7 +20,7 @@ import MainLayout from "../layouts/main-layout.astro";
             ({ code, name, image }) =>
                 `
             <a class="mx-auto" href="/projects/${code}">
-                <img class="size-64 min-w-64 object-cover rounded-lg" src="${image}" alt="${name}"/>
+                <img class="size-64 min-w-64 object-cover rounded-lg" src="/projects/${image}" alt="${name}"/>
             </a>
             `,
         ).join("");

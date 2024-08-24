@@ -1,9 +1,14 @@
+---
+import { Image } from "astro:assets";
+import meImage from "../../public/me.png";
+---
+
 <div
     id="avatar-container"
     class="relative order-1 flex size-[198px] flex-col items-center justify-center max-md:mb-10 sm:size-[298px] md:size-[348px] xl:size-[398px]"
 >
     <canvas id="avatar-canvas" class="absolute size-full"></canvas>
-    <img class="size-9/12 rounded-full object-cover" src="/images/me.png" alt="Matteo Ricciotti" />
+    <Image class="size-9/12 rounded-full object-cover" src={meImage} alt="Matteo Ricciotti" />
 </div>
 
 <script>
