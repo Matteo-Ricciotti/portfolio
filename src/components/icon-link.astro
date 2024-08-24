@@ -1,12 +1,15 @@
 ---
-type Props = astroHTML.JSX.AnchorHTMLAttributes;
+type Props = astroHTML.JSX.AnchorHTMLAttributes & {
+    darker?: boolean;
+};
 
-const props = Astro.props;
+const { darker, ...props } = Astro.props;
+
+const classes = darker
+    ? "border-transparent bg-white/10 hover:text-accent"
+    : "border-accent-hover hover:bg-accent-hover text-accent-hover hover:text-primary";
 ---
 
-<a
-    class="rounded-full border border-accent-hover p-1.5 text-accent-hover transition-all hover:bg-accent-hover hover:text-primary"
-    {...props}
->
+<a class={`rounded-full border p-1.5 transition-all cursor-pointer ${classes}`} {...props}>
     <slot />
 </a>

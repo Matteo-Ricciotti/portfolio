@@ -1,5 +1,42 @@
 ---
+import Avatar from "../components/avatar.astro";
+import Description from "../components/text/description.astro";
+import Title from "../components/text/title.astro";
 import MainLayout from "../layouts/main-layout.astro";
+import OutlineText from "../components/text/outline-text.astro";
+import StackLink from "../components/text/stack-link.astro";
+import IconLink from "../components/icon-link.astro";
+import ArrowRight from "../assets/arrow-right.astro";
+import Github from "../assets/github.astro";
 ---
 
-<MainLayout title="Matteo Ricciotti - Work" description="Most relevant projects" />
+<MainLayout title="Matteo Ricciotti - Work" description="Most relevant projects">
+    <div class="flex flex-col items-center justify-between text-center md:flex-row md:text-left">
+        <div class="order-2 md:order-none">
+            <OutlineText>01</OutlineText>
+            <Title>Project name</Title>
+            <Description>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iusto corrupti autem.
+            </Description>
+            <div
+                class="flex w-full max-w-full flex-col items-center md:max-w-[350px] md:items-start lg:max-w-[550px] xl:max-w-[650px]"
+            >
+                <ul class="flex flex-wrap justify-center gap-2 text-accent md:justify-start">
+                    <StackLink url="https://google.com">ReactJS</StackLink> -
+                    <StackLink url="https://google.com">NodeJS</StackLink> -
+                    <StackLink url="https://google.com">Typescript</StackLink>
+                </ul>
+                <div class="mb-4 mt-2 w-full border border-white/20"></div>
+                <div class="flex gap-4">
+                    <IconLink darker>
+                        <ArrowRight class="-rotate-45 transition-all hover:rotate-0" />
+                    </IconLink>
+                    <IconLink darker>
+                        <Github />
+                    </IconLink>
+                </div>
+            </div>
+        </div>
+        <Avatar />
+    </div>
+</MainLayout>

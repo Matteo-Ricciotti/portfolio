@@ -2,11 +2,12 @@
 import Avatar from "../components/avatar.astro";
 import Link from "../components/link.astro";
 import IconLink from "../components/icon-link.astro";
-import Title from "../components/title.astro";
+import Title from "../components/text/title.astro";
 import MainLayout from "../layouts/main-layout.astro";
 import Download from "../assets/download.astro";
 import Github from "../assets/github.astro";
 import Linkedin from "../assets/linkedin.astro";
+import Description from "../components/text/description.astro";
 ---
 
 <MainLayout
@@ -21,12 +22,10 @@ import Linkedin from "../assets/linkedin.astro";
                 <span class="lg:hidden">Hello I'm</span>
                 <span class="text-accent">Matteo Ricciotti</span>
             </Title>
-            <p
-                class="my-6 max-w-full text-sm leading-6 tracking-widest text-white/80 md:max-w-[300px] lg:max-w-[500px] lg:text-base lg:leading-8"
-            >
+            <Description>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur
                 adipisicing elit.
-            </p>
+            </Description>
             <div class="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
                 <Link href="/files/CV.pdf" target="_blank">
                     DOWNLOAD CV
