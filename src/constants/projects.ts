@@ -1,10 +1,22 @@
-export const WORK = [
+export type Project = {
+    code: string;
+    name: string;
+    description: string;
+    image: string;
+    stack: string[];
+    link: string | null;
+    github: string | null;
+};
+
+export const PROJECTS: Project[] = [
     {
         code: "project-1",
         name: "Project 1",
         description: "Description 1",
         image: "sample.jpg",
         stack: ["react-js", "node-js", "typescript"],
+        link: "https://google.com",
+        github: null,
     },
     {
         code: "project-2",
@@ -12,6 +24,8 @@ export const WORK = [
         description: "Description 2",
         image: "sample.jpg",
         stack: ["react-js", "node-js", "typescript"],
+        link: null,
+        github: null,
     },
     {
         code: "project-3",
@@ -19,6 +33,8 @@ export const WORK = [
         description: "Description 3",
         image: "sample.jpg",
         stack: ["react-js", "node-js", "typescript"],
+        link: null,
+        github: "https://github.com",
     },
     {
         code: "project-4",
@@ -26,6 +42,8 @@ export const WORK = [
         description: "Description 4",
         image: "sample.jpg",
         stack: ["react-js", "node-js", "typescript"],
+        link: "https://google.com",
+        github: "https://github.com",
     },
     {
         code: "project-5",
@@ -33,27 +51,7 @@ export const WORK = [
         description: "Description 5",
         image: "sample.jpg",
         stack: ["react-js", "node-js", "typescript"],
+        link: "https://google.com",
+        github: "https://github.com",
     },
 ];
-
-export const STACK = [
-    {
-        id: "react-js",
-        name: "ReactJS",
-        url: "https://react.dev/",
-    },
-    {
-        id: "node-js",
-        name: "NodeJS",
-        url: "https://nodejs.org",
-    },
-    {
-        id: "typescript",
-        name: "Typescript",
-        url: "https://www.typescriptlang.org/",
-    },
-];
-
-export const CONTACTS = [];
-
-export const EXPERIENCES = [];
