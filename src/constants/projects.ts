@@ -1,4 +1,4 @@
-export const PROJECTS = [
+export const WORK = [
     {
         code: "project-1",
         name: "Project 1",
