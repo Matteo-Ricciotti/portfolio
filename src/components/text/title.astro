@@ -1,11 +1,13 @@
 ---
+import { cn } from "../../utils";
+
 type Props = {
-    classes?: string;
+    moreClasses?: string;
 };
 
-const { classes } = Astro.props;
+const { moreClasses } = Astro.props;
 ---
 
-<h1 class=`text-4xl font-medium  xl:text-6xl ${classes}`>
+<h1 class=`${cn("text-4xl font-medium xl:text-6xl", moreClasses)}`>
     <slot />
 </h1>

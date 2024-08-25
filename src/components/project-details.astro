@@ -9,6 +9,7 @@ import Github from "../assets/github.astro";
 import { SKILLS } from "../constants/skills";
 import type { Project } from "../constants/projects";
 import ZPattern from "./z-pattern.astro";
+import { cn } from "../utils";
 
 type Props = Project & {
     number: number;
@@ -47,7 +48,7 @@ const technologies = stack.map((id) => {
         <div class="mb-4 mt-2 w-full border border-white/20"></div>
         <div class="flex gap-4">
             <IconLink href={link} target="_blank" disabledText="Link not available" darker>
-                <ArrowRight class=`-rotate-45 transition-all ${link ? "hover:rotate-0" : ""}` />
+                <ArrowRight class=`${cn("-rotate-45 transition-all", link && "hover:rotate-0" )}` />
             </IconLink>
             <IconLink href={github} target="_blank" disabledText="Closed source" darker>
                 <Github />
