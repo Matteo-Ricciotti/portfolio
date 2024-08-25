@@ -8,6 +8,7 @@ import ArrowRight from "../assets/arrow-right.astro";
 import Github from "../assets/github.astro";
 import { SKILLS } from "../constants/skills";
 import type { Project } from "../constants/projects";
+import ZPattern from "./z-pattern.astro";
 
 type Props = Project & {
     number: number;
@@ -23,36 +24,35 @@ const technologies = stack.map((id) => {
 });
 ---
 
-<div class="flex flex-col items-center justify-between text-center md:flex-row md:text-left">
-    <div class=`${swap ? "md:order-1 " : "md:order-2"}`>
+<ZPattern swap={swap}>
+    <div slot="title">
         <OutlineText>{String(number).padStart(2, "0")}</OutlineText>
         <Title>{name}</Title>
-        <Description>{description}</Description>
-        <div
-            class="flex w-full max-w-full flex-col items-center md:max-w-[350px] md:items-start lg:max-w-[550px] xl:max-w-[650px]"
-        >
-            <ul class="flex flex-wrap justify-center gap-2 text-accent md:justify-start">
-                {
-                    technologies.map(({ url, name }, i) => (
-                        <>
-                            <SkillLink url={url}>{name}</SkillLink>
-                            {i !== technologies.length - 1 && <li>-</li>}
-                        </>
-                    ))
-                }
-            </ul>
-            <div class="mb-4 mt-2 w-full border border-white/20"></div>
-            <div class="flex gap-4">
-                <IconLink href={link} target="_blank" disabledText="Link not available" darker>
-                    <ArrowRight class=`-rotate-45 transition-all ${link ? "hover:rotate-0" : ""}` />
-                </IconLink>
-                <IconLink href={github} target="_blank" disabledText="Closed source" darker>
-                    <Github />
-                </IconLink>
-            </div>
+    </div>
+    <Description slot="description">{description}</Description>
+    <div
+        slot="other"
+        class="flex w-full max-w-full flex-col items-center md:max-w-[350px] md:items-start lg:max-w-[550px] xl:max-w-[650px]"
+    >
+        <ul class="flex flex-wrap justify-center gap-2 text-accent md:justify-start">
+            {
+                technologies.map(({ url, name }, i) => (
+                    <>
+                        <SkillLink url={url}>{name}</SkillLink>
+                        {i !== technologies.length - 1 && <li>-</li>}
+                    </>
+                ))
+            }
+        </ul>
+        <div class="mb-4 mt-2 w-full border border-white/20"></div>
+        <div class="flex gap-4">
+            <IconLink href={link} target="_blank" disabledText="Link not available" darker>
+                <ArrowRight class=`-rotate-45 transition-all ${link ? "hover:rotate-0" : ""}` />
+            </IconLink>
+            <IconLink href={github} target="_blank" disabledText="Closed source" darker>
+                <Github />
+            </IconLink>
         </div>
     </div>
-    <div class=`${swap ? "md:order-2" : "md:order-1"}`>
-        <img class="size-72 object-cover" src=`/projects/${image}` alt={name} />
-    </div>
-</div>
+    <img slot="image" class="size-72 object-cover" src=`/projects/${image}` alt={name} />
+</ZPattern>

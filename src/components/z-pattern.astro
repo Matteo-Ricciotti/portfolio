@@ -1,0 +1,20 @@
+---
+import { cn } from "../utils";
+
+type Props = {
+    swap?: boolean;
+};
+
+const { swap } = Astro.props;
+---
+
+<div class="flex flex-col items-center justify-between text-center md:flex-row md:text-left">
+    <div class=`${cn("order-2", !swap && "md:order-1")}`>
+        <slot name="title" />
+        <slot name="description" />
+        <slot name="other" />
+    </div>
+    <div class=`${cn("order-1", !swap && "md:order-2")}`>
+        <slot name="image" />
+    </div>
+</div>

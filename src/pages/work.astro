@@ -6,6 +6,13 @@ import MainLayout from "../layouts/main-layout.astro";
 
 <MainLayout title="Matteo Ricciotti - Work" description="Most relevant projects">
     <div class="grid gap-20">
-        {PROJECTS.map((project, i) => <ProjectDetails number={i + 1} swap={i % 2 === 0} {...project} />)}
+        {
+            PROJECTS.map((project, i) => (
+                <>
+                    <ProjectDetails number={i + 1} swap={i % 2 !== 0} {...project} />
+                    {i !== PROJECTS.length - 1 && <hr />}
+                </>
+            ))
+        }
     </div>
 </MainLayout>
