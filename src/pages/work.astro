@@ -10,7 +10,7 @@ import MainLayout from "../layouts/main-layout.astro";
             PROJECTS.map((project, i) => (
                 <>
                     <ProjectDetails number={i + 1} swap={i % 2 !== 0} {...project} />
-                    {i !== PROJECTS.length - 1 && <hr />}
+                    {i !== PROJECTS.length - 1 && <div class="w-full border border-dashed border-accent/50" />}
                 </>
             ))
         }
