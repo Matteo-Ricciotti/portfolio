@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --primary: rgba(25, 31, 45, 1);
+        --accent: rgba(83, 221, 108, 1);
+        --accent-hover: rgba(70, 188, 108, 1);
+
+        --radius: 0.5rem;
+    }
+
+    :root {
+        --primary: rgba(25, 31, 45, 1);
+        --accent: rgba(83, 221, 108, 1);
+        --accent-hover: rgba(70, 188, 108, 1);
+
+        --radius: 0.5rem;
+    }
+}
+
+@layer base {
+    body {
+        @apply bg-primary text-white;
+    }
+}
