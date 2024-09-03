@@ -1,47 +1,53 @@
 ---
-import Avatar from "../components/avatar.astro";
-import Link from "../components/link.astro";
-import IconLink from "../components/icon-link.astro";
-import Title from "../components/text/title.astro";
 import MainLayout from "../layouts/main-layout.astro";
-import Download from "../assets/download.astro";
-import Github from "../assets/github.astro";
-import Linkedin from "../assets/linkedin.astro";
-import ZPattern from "../components/z-pattern.astro";
-import Description from "../components/text/description.astro";
+import Avatar from "../components/avatar.astro";
+
+import { Link } from "@/components/react/ui/link";
+import { IconLink } from "@/components/react/ui/icon-link";
+
+import { Title } from "@/components/react/text/title";
+import { Description } from "@/components/react/text/description";
+
+import { GitHub } from "@/components/react/assets/github";
+import { Download } from "@/components/react/assets/download";
+import { LinkedIn } from "@/components/react/assets/linkedin";
 ---
 
 <MainLayout
     title="Matteo Ricciotti Portfolio"
     description="Software Developer: my set of skills, experiences and projects"
 >
-    <ZPattern>
-        <div slot="title" class="flex flex-col gap-2">
-            <p>Software Developer</p>
-            <Title moreClasses="flex flex-col gap-2">
-                <span class="hidden lg:inline">Hello there I'm</span>
-                <span class="lg:hidden">Hello I'm</span>
-                <span class="text-accent">Matteo Ricciotti</span>
-            </Title>
-        </div>
-        <Description slot="description"
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing
-            elit.
-        </Description>
-        <div slot="other" class="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
-            <Link href="/files/CV.pdf" target="_blank">
-                DOWNLOAD CV
-                <Download />
-            </Link>
-            <div class="flex gap-3 md:mr-auto">
-                <IconLink href="https://github.com/Matteo-Ricciotti" target="_blank">
-                    <Github />
-                </IconLink>
-                <IconLink href="https://www.linkedin.com/in/matteo-ricciotti/" target="_blank">
-                    <Linkedin />
-                </IconLink>
+    <div class="flex flex-col items-center justify-between text-center md:flex-row md:text-left">
+        <div class="order-2 w-full md:order-none md:max-w-[50%]">
+            <div class="flex flex-col gap-2">
+                <p>Software Developer</p>
+                <Title className="flex flex-col gap-2">
+                    <span class="hidden lg:inline">Hello there I'm</span>
+                    <span class="lg:hidden">Hello I'm</span>
+                    <span class="text-accent">Matteo Ricciotti</span>
+                </Title>
+            </div>
+            <Description
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit.
+            </Description>
+            <div class="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
+                <Link href="/files/CV.pdf" target="_blank">
+                    DOWNLOAD CV
+                    <Download />
+                </Link>
+                <div class="flex gap-3 md:mr-auto">
+                    <IconLink href="https://github.com/Matteo-Ricciotti" target="_blank">
+                        <GitHub />
+                    </IconLink>
+                    <IconLink href="https://www.linkedin.com/in/matteo-ricciotti/" target="_blank">
+                        <LinkedIn />
+                    </IconLink>
+                </div>
             </div>
         </div>
-        <Avatar slot="image" />
-    </ZPattern>
+        <div class="md:max-w-[50%]">
+            <Avatar />
+        </div>
+    </div>
 </MainLayout>
