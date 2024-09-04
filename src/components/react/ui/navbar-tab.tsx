@@ -11,7 +11,7 @@ export const NavbarTab = ({ path, pathname, label }: NavbarTabProps) => {
         <li>
             <a
                 href={path}
-                className={`${cn("transition-all hover:text-accent-hover", pathname === path && "text-accent")}`}
+                className={`${cn("transition-all hover:text-accent-hover", pathname === path && "text-accent underline underline-offset-[10px]")}`}
             >
                 {label}
             </a>
