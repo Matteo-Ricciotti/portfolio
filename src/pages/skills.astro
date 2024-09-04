@@ -12,10 +12,13 @@ import { Javascript } from "@/components/react/assets/javascript";
 import { Typescript } from "@/components/react/assets/typescript";
 import { ReactJS } from "@/components/react/assets/react-js";
 import { NextJS } from "@/components/react/assets/next-js";
+import { Redux } from "@/components/react/assets/redux";
 import { NodeJS } from "@/components/react/assets/node-js";
+import { Express } from "@/components/react/assets/express";
 import { Fastify } from "@/components/react/assets/fastify";
 import { GraphQL } from "@/components/react/assets/graph-ql";
 import { Docker } from "@/components/react/assets/docker";
+import { MongoDB } from "@/components/react/assets/mongo-db";
 ---
 
 <MainLayout title=`${ABOUT.NAME} ${ABOUT.SURNAME} - Skills` ` description="My set of skills">
@@ -24,7 +27,7 @@ import { Docker } from "@/components/react/assets/docker";
             <Title>Skills</Title>
             <Description>Description</Description>
         </div>
-        <div class="grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-4">
+        <div class="grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
             {
                 SKILLS.map((skill) => (
                     <SkillCard title={skill.name} href={skill.url}>
@@ -46,12 +49,18 @@ import { Docker } from "@/components/react/assets/docker";
                                     return <ReactJS className={className} />;
                                 case "next-js":
                                     return <NextJS className={className} />;
+                                case "redux":
+                                    return <Redux className={className} />;
                                 case "node-js":
                                     return <NodeJS className={className} />;
+                                case "express":
+                                    return <Express className={className} />;
                                 case "fastify":
                                     return <Fastify className={className} />;
                                 case "graph-ql":
                                     return <GraphQL className={className} />;
+                                case "mongo-db":
+                                    return <MongoDB className={className} />;
                                 case "docker":
                                     return <Docker className={className} />;
                                 default:

@@ -41,9 +41,19 @@ export const SKILLS: Skill[] = [
         url: "https://nextjs.org/",
     },
     {
+        id: "redux",
+        name: "Redux",
+        url: "https://redux.js.org/",
+    },
+    {
         id: "node-js",
         name: "NodeJS",
         url: "https://nodejs.org",
+    },
+    {
+        id: "express",
+        name: "Express",
+        url: "https://expressjs.com/",
     },
     {
         id: "fastify",
@@ -54,6 +64,11 @@ export const SKILLS: Skill[] = [
         id: "graph-ql",
         name: "GraphQL",
         url: "https://graphql.org/",
+    },
+    {
+        id: "mongo-db",
+        name: "MongoDB",
+        url: "https://www.mongodb.com/",
     },
     {
         id: "docker",
