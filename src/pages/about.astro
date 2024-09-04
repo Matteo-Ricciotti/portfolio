@@ -1,8 +1,58 @@
 ---
 import { Title } from "@/components/react/text/title";
 import MainLayout from "../layouts/main-layout.astro";
+import { Description } from "@/components/react/text/description";
+import { AboutInfo } from "@/components/react/text/about-info";
+import { ABOUT } from "@/constants/about";
 ---
 
-<MainLayout title="" description="">
-    <Title>About</Title>
+<MainLayout title=`${ABOUT.NAME} ${ABOUT.SURNAME} - About` ` description="Some informations about me">
+    <div class="flex flex-col items-center gap-10 text-center">
+        <div>
+            <Title>About</Title>
+            <Description>Description</Description>
+        </div>
+        <div class="grid max-md:gap-20 md:grid-cols-2">
+            <div class="flex flex-col gap-8 md:items-start">
+                <AboutInfo name="Name">
+                    {ABOUT.NAME}
+                </AboutInfo>
+                <AboutInfo name="Surname">
+                    {ABOUT.SURNAME}
+                </AboutInfo>
+                <AboutInfo name="Nationality">
+                    {ABOUT.NATIONALITY}
+                </AboutInfo>
+                <AboutInfo name="Current Location">
+                    {ABOUT.CURRENT_LOCATION}
+                </AboutInfo>
+            </div>
+            <div class="flex flex-col gap-8 md:items-start">
+                <AboutInfo name="Email">
+                    {ABOUT.EMAIL}
+                </AboutInfo>
+                <AboutInfo name="Languages">
+                    {ABOUT.LANGUAGES.map((l, i) => `${l}${i !== ABOUT.LANGUAGES.length - 1 ? " - " : ""}`)}
+                </AboutInfo>
+                <AboutInfo durationElementId="duration" name="Experience" />
+                <AboutInfo name="Freelance">
+                    {ABOUT.FREELANCE ? "" : "Not"}&nbsp;Available
+                </AboutInfo>
+            </div>
+        </div>
+    </div>
 </MainLayout>
+
+<script>
+    import { ABOUT } from "@/constants/about";
+    import { getDuration } from "@/utils";
+
+    const durationElement = document.querySelector("span#duration");
+
+    if (durationElement) {
+        const { partial, full } = getDuration(ABOUT.START_CAREER_TIMESTAMP);
+
+        durationElement.setAttribute("title", full);
+        durationElement.innerHTML = partial;
+    }
+</script>

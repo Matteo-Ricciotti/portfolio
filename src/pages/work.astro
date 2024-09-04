@@ -1,8 +1,9 @@
 ---
 import { ProjectsCarousel } from "@/components/react/projects-carousel";
 import MainLayout from "../layouts/main-layout.astro";
+import { ABOUT } from "@/constants/about";
 ---
 
-<MainLayout title="Matteo Ricciotti - Work" description="Most relevant projects">
+<MainLayout title=`${ABOUT.NAME} ${ABOUT.SURNAME} - Work` description="Most relevant projects">
     <ProjectsCarousel client:load />
 </MainLayout>

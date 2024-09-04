@@ -1,23 +1,20 @@
 ---
 import { Image } from "astro:assets";
-
 import meImage from "../../public/me.png";
 import MainLayout from "../layouts/main-layout.astro";
-
 import { Link } from "@/components/react/ui/link";
 import { IconLink } from "@/components/react/ui/icon-link";
-
 import { Title } from "@/components/react/text/title";
 import { Description } from "@/components/react/text/description";
-
 import { GitHub } from "@/components/react/assets/github";
 import { Download } from "@/components/react/assets/download";
 import { LinkedIn } from "@/components/react/assets/linkedin";
 import { Avatar } from "@/components/react/avatar";
+import { ABOUT } from "@/constants/about";
 ---
 
 <MainLayout
-    title="Matteo Ricciotti Portfolio"
+    title=`${ABOUT.NAME} ${ABOUT.SURNAME} Portfolio`
     description="Software Developer: my set of skills, experiences and projects"
 >
     <div class="flex flex-col items-center justify-between text-center md:flex-row md:text-left">
@@ -27,7 +24,7 @@ import { Avatar } from "@/components/react/avatar";
                 <Title className="flex flex-col gap-2">
                     <span class="hidden lg:inline">Hello there I'm</span>
                     <span class="lg:hidden">Hello I'm</span>
-                    <span class="text-accent">Matteo Ricciotti</span>
+                    <span class="text-accent">{ABOUT.NAME}&nbsp;{ABOUT.SURNAME}</span>
                 </Title>
             </div>
             <Description
@@ -51,7 +48,7 @@ import { Avatar } from "@/components/react/avatar";
         </div>
         <div class="md:max-w-[50%]">
             <Avatar client:load>
-                <Image class="size-9/12 rounded-full object-cover" src={meImage} alt="Matteo Ricciotti" />
+                <Image class="size-9/12 rounded-full object-cover" src={meImage} alt=`${ABOUT.NAME} ${ABOUT.SURNAME}` />
             </Avatar>
         </div>
     </div>
