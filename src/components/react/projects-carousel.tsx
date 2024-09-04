@@ -28,10 +28,10 @@ export const ProjectsCarousel = () => {
     const currentProject = PROJECTS.find((_, i) => i === current - 1) ?? PROJECTS[0];
 
     return (
-        <div className="grid grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 gap-4 text-center md:grid-cols-2 md:gap-10 md:text-start">
             <ProjectDetails {...currentProject} />
             <Carousel
-                className="h-fit rounded-lg border-2 border-accent p-4"
+                className="rounded-lg border-2 border-accent p-4 max-md:min-h-[298px] md:h-fit"
                 setApi={setApi}
                 opts={{ loop: true }}
                 plugins={[Autoplay({ delay: 5000 })]}
@@ -41,7 +41,7 @@ export const ProjectsCarousel = () => {
                         {PROJECTS.map((project) => (
                             <CarouselItem
                                 key={project.code}
-                                className="aspect-square size-[198px] sm:size-[298px] md:size-[348px] xl:size-[398px]"
+                                className="aspect-square size-[298px] md:size-[348px] xl:size-[398px]"
                             >
                                 <img
                                     width={999}
@@ -56,8 +56,8 @@ export const ProjectsCarousel = () => {
                         ))}
                     </CarouselContent>
                 </div>
-                <CarouselPrevious />
-                <CarouselNext />
+                <CarouselPrevious className="max-md:-top-[3.2rem] max-md:left-[calc(50%-6.5rem)]" />
+                <CarouselNext className="max-md:-top-[3.2rem] max-md:right-[calc(50%-6.5rem)]" />
             </Carousel>
         </div>
     );

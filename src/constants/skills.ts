@@ -14,4 +14,9 @@ export const SKILLS = [
         name: "Typescript",
         url: "https://www.typescriptlang.org/",
     },
+    {
+        id: "fastify",
+        name: "Fastify",
+        url: "https://fastify.dev/",
+    },
 ];
