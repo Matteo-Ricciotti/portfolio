@@ -4,40 +4,40 @@ export type Project = {
     description: string;
     image: string;
     stack: string[];
-    link: string | null;
-    github: string | null;
+    link: string | undefined;
+    github: string | undefined;
 };
 
 export const PROJECTS: Project[] = [
     {
-        code: "project-1",
+        code: "1",
         name: "Project 1",
         description: "Description 1",
         image: "sample.jpg",
         stack: ["react-js", "node-js", "typescript"],
         link: "https://google.com",
-        github: null,
+        github: undefined,
     },
     {
-        code: "project-2",
+        code: "2",
         name: "Project 2",
         description: "Description 2",
         image: "sample.jpg",
         stack: ["react-js", "node-js", "typescript"],
-        link: null,
-        github: null,
+        link: undefined,
+        github: undefined,
     },
     {
-        code: "project-3",
+        code: "3",
         name: "Project 3",
         description: "Description 3",
         image: "sample.jpg",
         stack: ["react-js", "node-js", "typescript"],
-        link: null,
+        link: undefined,
         github: "https://github.com",
     },
     {
-        code: "project-4",
+        code: "4",
         name: "Project 4",
         description: "Description 4",
         image: "sample.jpg",
@@ -46,7 +46,7 @@ export const PROJECTS: Project[] = [
         github: "https://github.com",
     },
     {
-        code: "project-5",
+        code: "5",
         name: "Project 5",
         description: "Description 5",
         image: "sample.jpg",
