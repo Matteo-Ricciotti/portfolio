@@ -1,0 +1,66 @@
+---
+import { Title } from "@/components/react/text/title";
+import MainLayout from "../layouts/main-layout.astro";
+import { Description } from "@/components/react/text/description";
+import { ABOUT } from "@/constants/about";
+import { SKILLS } from "@/constants/skills";
+import { SkillCard } from "@/components/react/skill-card";
+import { HTML5 } from '@/components/react/assets/html-5'
+import { CSS3 } from "@/components/react/assets/css-3";
+import { TailwindCSS } from "@/components/react/assets/tailwind-css";
+import { Javascript } from "@/components/react/assets/javascript";
+import { Typescript } from "@/components/react/assets/typescript";
+import { ReactJS } from "@/components/react/assets/react-js";
+import { NextJS } from "@/components/react/assets/next-js";
+import { NodeJS } from "@/components/react/assets/node-js";
+import { Fastify } from "@/components/react/assets/fastify";
+import { GraphQL } from "@/components/react/assets/graph-ql";
+import { Docker } from "@/components/react/assets/docker";
+---
+
+<MainLayout title=`${ABOUT.NAME} ${ABOUT.SURNAME} - Skills` ` description="My set of skills">
+    <div class="flex flex-col items-center gap-10 text-center">
+        <div>
+            <Title>Skills</Title>
+            <Description>Description</Description>
+        </div>
+        <div class="grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-4">
+            {
+                SKILLS.map((skill) => (
+                    <SkillCard title={skill.name} href={skill.url}>
+                        {(() => {
+                             const className = "size-16 text-white group-hover:text-accent-hover transition-colors";
+
+                            switch (skill.id) {
+                                case "html-5":
+                                    return <HTML5 className={className} />;
+                                case "css-3":
+                                    return <CSS3 className={className} />;
+                                case "tailwind-css":
+                                    return <TailwindCSS className={className} />;
+                                case "javascript":
+                                    return <Javascript className={className} />;
+                                case "typescript":
+                                    return <Typescript className={className} />;
+                                case "react-js":
+                                    return <ReactJS className={className} />;
+                                case "next-js":
+                                    return <NextJS className={className} />;
+                                case "node-js":
+                                    return <NodeJS className={className} />;
+                                case "fastify":
+                                    return <Fastify className={className} />;
+                                case "graph-ql":
+                                    return <GraphQL className={className} />;
+                                case "docker":
+                                    return <Docker className={className} />;
+                                default:
+                                    return <></>;
+                            }
+                        })()}
+                    </SkillCard>
+                ))
+            }
+        </div>
+    </div>
+</MainLayout>

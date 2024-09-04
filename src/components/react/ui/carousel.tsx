@@ -1,7 +1,7 @@
 import * as React from "react";
 import useEmblaCarousel, { type UseEmblaCarouselType } from "embla-carousel-react";
 
-import { cn } from "@/utils.ts";
+import { cn } from "@/utils";
 import { Button } from "@/components/react/ui/button";
 import { ChevronRight } from "../assets/chevron-right";
 
