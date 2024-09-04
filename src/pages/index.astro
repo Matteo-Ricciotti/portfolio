@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import meImage from "../../public/me.png";
+// import meImage from "../../public/me.png";
 import MainLayout from "../layouts/main-layout.astro";
 import { Link } from "@/components/react/ui/link";
 import { IconLink } from "@/components/react/ui/icon-link";
@@ -48,7 +48,7 @@ import { ABOUT } from "@/constants/about";
         </div>
         <div class="md:max-w-[50%]">
             <Avatar client:load>
-                <Image class="size-9/12 rounded-full object-cover" src={meImage} alt=`${ABOUT.NAME} ${ABOUT.SURNAME}` />
+                <!-- <Image class="size-9/12 rounded-full object-cover" src={meImage} alt=`${ABOUT.NAME} ${ABOUT.SURNAME}` /> -->
             </Avatar>
         </div>
     </div>

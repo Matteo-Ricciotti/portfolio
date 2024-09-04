@@ -1,19 +1,14 @@
-import { cn } from "@/utils";
+import type { PropsWithChildren } from "react";
 
 type NavbarTabProps = {
     path: string;
-    pathname: string;
-    label: string;
 };
 
-export const NavbarTab = ({ path, pathname, label }: NavbarTabProps) => {
+export const NavbarTab = ({ path, children }: PropsWithChildren<NavbarTabProps>) => {
     return (
         <li>
-            <a
-                href={path}
-                className={`${cn("transition-all hover:text-accent-hover", pathname === path && "text-accent underline underline-offset-[10px]")}`}
-            >
-                {label}
+            <a href={path} className="transition-all hover:text-accent-hover">
+                {children}
             </a>
         </li>
     );
