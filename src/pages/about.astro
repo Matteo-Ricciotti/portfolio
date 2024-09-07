@@ -35,10 +35,10 @@ import { ABOUT } from "@/constants/about";
                 <AboutInfo name="Languages">
                     {ABOUT.LANGUAGES.map((l, i) => `${l}${i !== ABOUT.LANGUAGES.length - 1 ? " - " : ""}`)}
                 </AboutInfo>
-                <ExperienceAboutField client:only />
                 <AboutInfo name="Freelance">
                     {ABOUT.FREELANCE ? "" : "Not"}&nbsp;Available
                 </AboutInfo>
+                <ExperienceAboutField client:only />
             </div>
         </div>
     </div>
