@@ -2,15 +2,14 @@
 import { Image } from "astro:assets";
 // import meImage from "../../public/me.png";
 import MainLayout from "../layouts/main-layout.astro";
-import { Link } from "@/components/react/ui/link";
-import { IconLink } from "@/components/react/ui/icon-link";
 import { Title } from "@/components/react/text/title";
 import { Description } from "@/components/react/text/description";
 import { GitHub } from "@/components/react/assets/github";
-import { Download } from "@/components/react/assets/download";
 import { LinkedIn } from "@/components/react/assets/linkedin";
 import { Avatar } from "@/components/react/avatar";
 import { ABOUT } from "@/constants/about";
+import { Button } from "@/components/react/ui/button";
+import { Eye } from "@/components/react/assets/eye";
 ---
 
 <MainLayout
@@ -32,17 +31,17 @@ import { ABOUT } from "@/constants/about";
                 adipisicing elit.
             </Description>
             <div class="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
-                <Link href="/files/CV.pdf" target="_blank">
-                    DOWNLOAD CV
-                    <Download />
-                </Link>
+                <Button id="download-cv" variant="outline">
+                    VIEW CV
+                    <Eye />
+                </Button>
                 <div class="flex gap-3 md:mr-auto">
-                    <IconLink href="https://github.com/Matteo-Ricciotti" target="_blank">
+                    <Button id="github-link" size="icon" variant="outline">
                         <GitHub />
-                    </IconLink>
-                    <IconLink href="https://www.linkedin.com/in/matteo-ricciotti/" target="_blank">
+                    </Button>
+                    <Button id="linkedin-link" size="icon" variant="outline">
                         <LinkedIn />
-                    </IconLink>
+                    </Button>
                 </div>
             </div>
         </div>
@@ -53,3 +52,15 @@ import { ABOUT } from "@/constants/about";
         </div>
     </div>
 </MainLayout>
+
+<script>
+    const downloadCv = document.querySelector("button#download-cv");
+    const githubLink = document.querySelector("button#github-link");
+    const linkedinLink = document.querySelector("button#linkedin-link");
+
+    if (downloadCv && githubLink && linkedinLink) {
+        downloadCv.addEventListener("click", () => window.open("/files/CV.pdf"));
+        githubLink.addEventListener("click", () => window.open("https://github.com/Matteo-Ricciotti"));
+        linkedinLink.addEventListener("click", () => window.open("https://www.linkedin.com/in/matteo-ricciotti"));
+    }
+</script>

@@ -56,8 +56,8 @@ export const ProjectsCarousel = () => {
                         ))}
                     </CarouselContent>
                 </div>
-                <CarouselPrevious className="max-md:-top-[3.2rem] max-md:left-[calc(50%-6.5rem)]" />
-                <CarouselNext className="max-md:-top-[3.2rem] max-md:right-[calc(50%-6.5rem)]" />
+                <CarouselPrevious className="max-md:-top-[3.4rem] max-md:left-[calc(50%-6.5rem)]" />
+                <CarouselNext className="max-md:-top-[3.4rem] max-md:right-[calc(50%-6.5rem)]" />
             </Carousel>
         </div>
     );

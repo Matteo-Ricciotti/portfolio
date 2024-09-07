@@ -10,7 +10,7 @@ import { Description } from "./text/description";
 import { OutlineText } from "./text/outline-text";
 import { SkillLink } from "./text/skill-link";
 import { Title } from "./text/title";
-import { IconLink } from "./ui/icon-link";
+import { Button } from "./ui/button";
 
 type ProjectDetailsProps = Project;
 
@@ -42,12 +42,12 @@ export const ProjectDetails = ({ code, name, description, image, stack, link, gi
                 </ul>
                 <div className="mb-6 mt-4 w-full border border-white/20"></div>
                 <div className="flex gap-4">
-                    <IconLink href={link} target="_blank" disabledTitle="Link not available" darker>
+                    <Button disabled={!link} onClick={() => window.open(link)} size="icon" variant="secondary">
                         <ArrowRight className={`${cn("-rotate-45 transition-all", link && "hover:rotate-0")}`} />
-                    </IconLink>
-                    <IconLink href={github} target="_blank" disabledTitle="Closed source" darker>
+                    </Button>
+                    <Button disabled={!github} onClick={() => window.open(github)} size="icon" variant="secondary">
                         <GitHub />
-                    </IconLink>
+                    </Button>
                 </div>
             </div>
         </div>
