@@ -36,10 +36,10 @@ import { Eye } from "@/components/react/assets/eye";
                     <Eye />
                 </Button>
                 <div class="flex gap-3 md:mr-auto">
-                    <Button id="github-link" size="icon" variant="outline">
+                    <Button id="github-profile" aria-label="GitHub Profile" size="icon" variant="outline">
                         <GitHub />
                     </Button>
-                    <Button id="linkedin-link" size="icon" variant="outline">
+                    <Button id="linkedin-profile" aria-label="Linkedin Profile" size="icon" variant="outline">
                         <LinkedIn />
                     </Button>
                 </div>
@@ -55,8 +55,8 @@ import { Eye } from "@/components/react/assets/eye";
 
 <script>
     const downloadCv = document.querySelector("button#download-cv");
-    const githubLink = document.querySelector("button#github-link");
-    const linkedinLink = document.querySelector("button#linkedin-link");
+    const githubLink = document.querySelector("button#github-profile");
+    const linkedinLink = document.querySelector("button#linkedin-profile");
 
     if (downloadCv && githubLink && linkedinLink) {
         downloadCv.addEventListener("click", () => window.open("/files/CV.pdf"));

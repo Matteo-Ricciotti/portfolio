@@ -42,10 +42,22 @@ export const ProjectDetails = ({ code, name, description, image, stack, link, gi
                 </ul>
                 <div className="mb-6 mt-4 w-full border border-white/20"></div>
                 <div className="flex gap-4">
-                    <Button disabled={!link} onClick={() => window.open(link)} size="icon" variant="secondary">
+                    <Button
+                        disabled={!link}
+                        aria-label="Project Link"
+                        onClick={() => window.open(link)}
+                        size="icon"
+                        variant="secondary"
+                    >
                         <ArrowRight className={`${cn("-rotate-45 transition-all", link && "hover:rotate-0")}`} />
                     </Button>
-                    <Button disabled={!github} onClick={() => window.open(github)} size="icon" variant="secondary">
+                    <Button
+                        disabled={!github}
+                        aria-label="Project Code"
+                        onClick={() => window.open(github)}
+                        size="icon"
+                        variant="secondary"
+                    >
                         <GitHub />
                     </Button>
                 </div>
