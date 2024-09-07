@@ -2,6 +2,7 @@
 import { Title } from "@/components/react/text/title";
 import MainLayout from "../layouts/main-layout.astro";
 import { Description } from "@/components/react/text/description";
+import { ExperienceAboutField } from "@/components/react/experience-about-field";
 import { AboutInfo } from "@/components/react/text/about-info";
 import { ABOUT } from "@/constants/about";
 ---
@@ -34,7 +35,7 @@ import { ABOUT } from "@/constants/about";
                 <AboutInfo name="Languages">
                     {ABOUT.LANGUAGES.map((l, i) => `${l}${i !== ABOUT.LANGUAGES.length - 1 ? " - " : ""}`)}
                 </AboutInfo>
-                <AboutInfo durationElementId="duration" name="Experience" />
+                <ExperienceAboutField client:only />
                 <AboutInfo name="Freelance">
                     {ABOUT.FREELANCE ? "" : "Not"}&nbsp;Available
                 </AboutInfo>
@@ -42,17 +43,3 @@ import { ABOUT } from "@/constants/about";
         </div>
     </div>
 </MainLayout>
-
-<script>
-    import { ABOUT } from "@/constants/about";
-    import { getDuration } from "@/utils";
-
-    const durationElement = document.querySelector("span#duration");
-
-    if (durationElement) {
-        const { partial, full } = getDuration(ABOUT.START_CAREER_TIMESTAMP);
-
-        durationElement.setAttribute("title", full);
-        durationElement.innerHTML = partial;
-    }
-</script>

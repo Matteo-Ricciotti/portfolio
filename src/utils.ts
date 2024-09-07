@@ -26,10 +26,9 @@ export const getDuration = (timestamp: number) => {
     const daysStr = remainingDaysAfterMonth > 0 ? `${remainingDaysAfterMonth} Days ` : "";
     const hoursStr = remainingHours > 0 ? `${remainingHours} Hours ` : "";
     const minutesStr = remainingMinutes > 0 ? `${remainingMinutes} Minutes ` : "";
-    const secondsStr = remainingSeconds > 0 ? `${remainingSeconds} Seconds` : "";
 
     return {
-        partial: `${yearsStr}${monthsStr}`.trim() + "...",
-        full: `${yearsStr}${monthsStr}${daysStr}${hoursStr}${minutesStr}${secondsStr}`.trim(),
+        partial: `${yearsStr}${monthsStr}`.trim(),
+        full: `${yearsStr}${monthsStr}${daysStr}${hoursStr}${minutesStr}`.trim(),
     };
 };
