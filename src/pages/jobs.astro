@@ -3,6 +3,8 @@ import { Title } from "@/components/react/text/title";
 import MainLayout from "../layouts/main-layout.astro";
 import { Description } from "@/components/react/text/description";
 import { ABOUT } from "@/constants/about";
+import { JOBS } from "@/constants/jobs";
+import { JobCard } from "@/components/react/job-card";
 ---
 
 <MainLayout title=`${ABOUT.NAME} ${ABOUT.SURNAME} - Jobs` ` description="My job experiences">
@@ -11,6 +13,8 @@ import { ABOUT } from "@/constants/about";
             <Title>Jobs</Title>
             <Description>Description</Description>
         </div>
-        <div class="grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"></div>
+        <div class="grid w-full grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+            {JOBS.map((job) => <JobCard {...job} />)}
+        </div>
     </div>
 </MainLayout>

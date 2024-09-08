@@ -4,6 +4,15 @@ type JobCardProps = Job;
 
 export const JobCard = ({ role, company, startDate, endDate }: JobCardProps) => {
     return (
-        <div className="group rounded-md bg-white/10 p-8 transition-all hover:scale-[1.1] hover:bg-white/5 sm:p-16" />
+        <div className="group rounded-md bg-black/20 p-4 text-center transition-all hover:bg-white/5 sm:p-6 md:text-start md:hover:scale-[1.05]">
+            <p className="text-sm tracking-wide text-accent">
+                {startDate} - {endDate || "Now"}
+            </p>
+            <p className="mt-3 text-lg">{role}</p>
+            <div className="mt-6 flex items-center justify-center gap-2 md:justify-start">
+                <div className="size-1.5 rounded-full bg-accent"></div>
+                <p className="tracking-widest text-white/50">{company}</p>
+            </div>
+        </div>
     );
 };
