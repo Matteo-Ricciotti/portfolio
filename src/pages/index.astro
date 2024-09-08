@@ -10,6 +10,7 @@ import { Avatar } from "@/components/react/avatar";
 import { ABOUT } from "@/constants/about";
 import { Button } from "@/components/react/ui/button";
 import { Eye } from "@/components/react/assets/eye";
+import { Counters } from "@/components/react/counters";
 ---
 
 <MainLayout
@@ -51,6 +52,7 @@ import { Eye } from "@/components/react/assets/eye";
             </Avatar>
         </div>
     </div>
+    <Counters client:only />
 </MainLayout>
 
 <script>
