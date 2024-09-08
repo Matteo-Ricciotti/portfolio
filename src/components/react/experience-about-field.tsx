@@ -3,11 +3,7 @@ import { AboutInfo } from "./text/about-info";
 import { ABOUT } from "@/constants/about";
 
 export const ExperienceAboutField = () => {
-    const { partial, full } = getDuration(ABOUT.START_CAREER_TIMESTAMP);
+    const duration = getDuration(ABOUT.START_CAREER_TIMESTAMP, true);
 
-    return (
-        <AboutInfo title={full} name="Experience">
-            {partial}
-        </AboutInfo>
-    );
+    return <AboutInfo name="Experience">{duration}</AboutInfo>;
 };
