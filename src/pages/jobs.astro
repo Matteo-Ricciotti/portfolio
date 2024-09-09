@@ -14,7 +14,7 @@ import { JobCard } from "@/components/react/job-card";
             <Description>Description</Description>
         </div>
         <div class="grid w-full grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
-            {JOBS.map((job) => <JobCard {...job} />)}
+            {JOBS.map((job) => <JobCard {...job} client:load />)}
         </div>
     </div>
 </MainLayout>
