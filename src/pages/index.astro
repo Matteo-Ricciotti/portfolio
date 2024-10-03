@@ -28,14 +28,10 @@ import { Counters } from "@/components/react/counters";
                 </Title>
             </div>
             <Description
-                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit.
+                >My goal is to have a broader view of the web development field in order to be free to do my work with
+                all the possibilities available
             </Description>
             <div class="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
-                <Button id="download-cv" variant="outline">
-                    VIEW CV
-                    <Eye />
-                </Button>
                 <div class="flex gap-3 md:mr-auto">
                     <Button id="github-profile" aria-label="GitHub Profile" size="icon" variant="outline">
                         <GitHub />
@@ -56,13 +52,14 @@ import { Counters } from "@/components/react/counters";
 </MainLayout>
 
 <script>
-    const downloadCv = document.querySelector("button#download-cv");
     const githubLink = document.querySelector("button#github-profile");
     const linkedinLink = document.querySelector("button#linkedin-profile");
 
-    if (downloadCv && githubLink && linkedinLink) {
-        downloadCv.addEventListener("click", () => window.open("/files/CV.pdf"));
+    if (githubLink) {
         githubLink.addEventListener("click", () => window.open("https://github.com/Matteo-Ricciotti"));
+    }
+
+    if (linkedinLink) {
         linkedinLink.addEventListener("click", () => window.open("https://www.linkedin.com/in/matteo-ricciotti"));
     }
 </script>

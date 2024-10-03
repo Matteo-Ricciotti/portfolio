@@ -18,7 +18,7 @@ export const SKILLS: Skill[] = [
     {
         id: "tailwind-css",
         name: "TailwindCSS",
-        url: "https://tailwindcss.com/",
+        url: "https://tailwindcss.com",
     },
     {
         id: "javascript",
@@ -28,22 +28,32 @@ export const SKILLS: Skill[] = [
     {
         id: "typescript",
         name: "Typescript",
-        url: "https://www.typescriptlang.org/",
+        url: "https://www.typescriptlang.org",
     },
     {
         id: "react-js",
         name: "ReactJS",
-        url: "https://react.dev/",
+        url: "https://react.dev",
     },
     {
         id: "next-js",
         name: "NextJS",
-        url: "https://nextjs.org/",
+        url: "https://nextjs.org",
     },
     {
         id: "redux",
         name: "Redux",
-        url: "https://redux.js.org/",
+        url: "https://redux.js.org",
+    },
+    {
+        id: "expo",
+        name: "Expo",
+        url: "https://expo.dev",
+    },
+    {
+        id: "flutter",
+        name: "Flutter",
+        url: "https://flutter.dev",
     },
     {
         id: "node-js",
@@ -53,26 +63,26 @@ export const SKILLS: Skill[] = [
     {
         id: "express",
         name: "Express",
-        url: "https://expressjs.com/",
+        url: "https://expressjs.com",
     },
     {
         id: "fastify",
         name: "Fastify",
-        url: "https://fastify.dev/",
+        url: "https://fastify.dev",
     },
     {
         id: "graph-ql",
         name: "GraphQL",
-        url: "https://graphql.org/",
+        url: "https://graphql.org",
     },
     {
         id: "mongo-db",
         name: "MongoDB",
-        url: "https://www.mongodb.com/",
+        url: "https://www.mongodb.com",
     },
     {
         id: "docker",
         name: "Docker",
-        url: "https://www.docker.com/",
+        url: "https://www.docker.com",
     },
 ];

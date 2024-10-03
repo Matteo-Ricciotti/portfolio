@@ -13,6 +13,8 @@ import { Typescript } from "@/components/react/assets/typescript";
 import { ReactJS } from "@/components/react/assets/react-js";
 import { NextJS } from "@/components/react/assets/next-js";
 import { Redux } from "@/components/react/assets/redux";
+import { Expo } from "@/components/react/assets/expo";
+import {Flutter } from "@/components/react/assets/flutter";
 import { NodeJS } from "@/components/react/assets/node-js";
 import { Express } from "@/components/react/assets/express";
 import { Fastify } from "@/components/react/assets/fastify";
@@ -25,7 +27,7 @@ import { MongoDB } from "@/components/react/assets/mongo-db";
     <div class="flex flex-col items-center gap-10 text-center">
         <div>
             <Title>Skills</Title>
-            <Description>Description</Description>
+            <Description>My skills set</Description>
         </div>
         <div class="grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
             {
@@ -51,6 +53,10 @@ import { MongoDB } from "@/components/react/assets/mongo-db";
                                     return <NextJS className={className} />;
                                 case "redux":
                                     return <Redux className={className} />;
+                                case "expo":
+                                    return <Expo className={className} />;
+                                case "flutter":
+                                    return <Flutter className={className} />;
                                 case "node-js":
                                     return <NodeJS className={className} />;
                                 case "express":

@@ -5,7 +5,7 @@ export const ABOUT = {
     NATIONALITY: "Italian",
     CURRENT_LOCATION: "Turin (Italy)",
     LANGUAGES: ["Italian", "English"],
-    FREELANCE: true,
+    FREELANCE: false,
     START_CAREER_TIMESTAMP: 1664787600000, // Monday October 3rd 2022 09:00:00
     GITHUB_COMMITS: 600,
 };

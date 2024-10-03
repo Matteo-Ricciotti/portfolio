@@ -8,9 +8,9 @@ export const Counters = () => {
     const experience = getDuration(ABOUT.START_CAREER_TIMESTAMP);
 
     return (
-        <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 md:mt-16 md:grid-cols-4">
+        <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3 md:mt-16">
             <Countup name="Years of experience" number={experience} />
-            <Countup name="Projects completed" number={PROJECTS.length} />
+            {/* <Countup name="Projects completed" number={PROJECTS.length} /> */}
             <Countup name="Skills mastered" number={SKILLS.length} />
             <Countup name="Github commits" number={ABOUT.GITHUB_COMMITS} />
         </div>
